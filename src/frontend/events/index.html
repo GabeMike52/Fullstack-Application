@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Wishlist</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="w-screen h-screen">
+  <main>
     <header>
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <h1 class="text-xl px-2">IWanToDo</h1>
-            </div>
-            <div class="flex-none">
-              <ul class="menu menu-horizontal px-5 gap-2">
-                <li><a href="/src/frontend/register/index.html" class="btn btn-outline">Sign In</a></li>
-                <li><a href="/src/frontend/login/index.html" class="btn btn-outline">Login</a></li>
-              </ul>
+      <div class="navbar bg-base-300">
+          <div class="flex-1">
+            <h1 class="text-xl px-2">IWanToDo</h1>
+          </div>
+          <div class="flex-none">
+            <div class="flex items-center gap-4">
+              <div>
+                <p id="user-name" class="capitalize"></p>
+                <p id="user-email" class="text-[8px]"></p>
+              </div>
+              <button id="logout-btn" class="btn btn-outline">Exit</button>
             </div>
           </div>
+        </div>
     </header>
-    <main>
-    </main>
-    </main>
-    <script src="./script.js"></script>
+    <section class="w-[600px] m-auto">
+      <div class="flex w-full gap-8 mt-8">
+        <input
+          id="event-input"
+          type="text"
+          placeholder="Type a new event..."
+          class="input input-bordered w-full"
+        />
+        <button id="event-button" class="btn btn-primary">Create</button>
+      </div>
+      <ul id="events-list" class="w-full mt-8"></ul>
+    </section>
+  </main>
+  <script src="/src/frontend/events/script.js "></script>
 </body>
 </html>

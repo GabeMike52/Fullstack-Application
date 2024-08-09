@@ -7,7 +7,7 @@ const doLogin = async (userData) => {
             },
             body: JSON.stringify(userData)
         }).then(res => res.json());
-        return userLogged;
+        return userLogged.user;
     } catch (error) {
         console.error(error);
     }
@@ -16,7 +16,6 @@ const doLogin = async (userData) => {
 const nameInput = document.getElementById('login-username');
 const passwordInput = document.getElementById('login-password');
 const loginButton = document.getElementById('login-button');
-console.log(loginButton.textContent);
 const loginSuccessAlert = document.getElementById('login-success');
 
 loginButton.addEventListener('click', async () => {
@@ -29,9 +28,11 @@ loginButton.addEventListener('click', async () => {
 
     const userData = { name, password };
     const user = await doLogin(userData);
+    console.log(user);
 
     if (user) {
         loginSuccessAlert.className += 'flex';
+        localStorage.setItem('user', JSON.stringify(user));
         setTimeout(() => {
             window.location.href = 'http://127.0.0.1:5500/src/frontend/events/index.html'
         }, 1000);
