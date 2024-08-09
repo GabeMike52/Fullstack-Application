@@ -16,7 +16,7 @@ const createEvent = async (event) => {
 
 const deleteEvent = async (eventId) => {
     try {
-        await fetch('http:localhost:3000/events' + '/' + eventId, {
+        await fetch('http://localhost:3000/events' + '/' + eventId, {
             method: 'DELETE',
         });
     } catch (error) {
@@ -26,7 +26,7 @@ const deleteEvent = async (eventId) => {
 
 const updateEvent = async (eventId, eventUpdate) => {
     try {
-        await fetch('http:localhost:3000/events' + '/' + eventId, {
+        await fetch('http://localhost:3000/events' + '/' + eventId, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
