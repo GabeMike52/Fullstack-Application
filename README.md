@@ -1,15 +1,20 @@
-<h1>How To Use?</h1>
-<ol>
-  <li>Download and install Node.js at your device.</li>
-  <li>Start a fresh node project (npm init -y)</li>
-  <li>Install the project's dependencies:</li>
-  <ul>
-    <li>npm install express</li>
-    <li>npm install sqlite3</li>
-    <li>npm install sequelize</li>
-    <li>npm install cors</li>
-  </ul>
-  <li>Run the server.js archive ('node .' inside the backend folder)</li>
-  <li>Run the index.html inside the register folder with Live Server</li>
-  <li>Try it out!</li>
-</ol>
+**How to use**
+==============
+1. Install Node.js
+2. Install npm or yarn
+3. Install the dependencies and run the server inside the src/backend folder
+```bash
+#Install the project's dependencies
+npm install
+#Run the server.js inside the backend folder
+cd src/backend/
+node server.js
+```
+Or
+```bash
+yarn install
+cd src/backend/
+node server.js
+```
+4. Run the index.html inside the register folder with Live Server
+5. Register and try it!
